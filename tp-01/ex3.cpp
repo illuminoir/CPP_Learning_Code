@@ -2,16 +2,17 @@
 // compile et affiche 42.
 
 #include <iostream>
+#include <vector>
 
-XX add(XX a, XX b) {
+int add(int a, const int b) {
   return a + b;
 }
 
-XX add_to(XX a, XX b) {
+void add_to(int& a, int b) {
   a += b;
 }
 
-XX another_add_to(XX a, XX b) {
+void another_add_to(int* a, int b) {
   *a += b;
 }
 
@@ -33,10 +34,16 @@ Quelles sont les différences entre ces différentes méthodes
 Par référence ? Et par référence constante ?
 */
 
+/*
+Par valeur si pas besoin de modifier le paramètre et pas trop couteuse
+Par référence si paramètre de fonction qui va être modifié
+Référence constante = paramètre coûteux que l'on veut pas modifier
+*/
+
 // 3. Modifiez les signatures des fonctions suivantes de manière à ce que le passage 
 //de paramètres soit le plus efficace et sécurisé possible.
 
-int         count_a_occurences(std::string s);
-void        update_loop(const float& dt, std::string* errors_out);
-bool        are_all_positives(std::vector<int> values, int* negative_indices_out, size_t* negative_count_out);
-std::string concatenate(char* str1, char* str2);
+int         count_a_occurences(std::string& s);
+void        update_loop(const float& dt, std::string errors_out);
+bool        are_all_positives(const std::vector<int>& values, int& negative_indices_out, size_t& negative_count_out);
+std::string concatenate(const std::string& str1, const std::string& str2);

@@ -13,7 +13,7 @@ void                         translate(vector<string>& sentence, vector<pair<str
 
 int main(int argc, char** argv)
 {
-    const char* dict_path, word, translation, sentence;
+    string dict_path, word, translation, sentence;
 
     if (!parse_params(argc, argv, dict_path, translation, sentence))
     {
@@ -75,7 +75,7 @@ bool parse_params(int argc, char** argv, string& dict_path, string& word, string
     return true;
 }
 
-vector<pair<string, string>> open_dictionary(char* path)
+vector<pair<string, string>> open_dictionary(string path)
 {
     vector<pair<string, string>> dict;
 
