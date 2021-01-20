@@ -33,7 +33,11 @@ int main() {
 }
 ```
 
+le code affiche 17 deux fois, puisque c'est une variable statique incrémentée de 10, 5, 1 et 1.
+
 2. Que se passe si on enlève la ligne marquée "initialisation" ?
+
+-> undefined reference to `AddX::global_sum'
 
 ## Exercice 2 - Construction et destruction
 

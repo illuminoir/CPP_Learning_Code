@@ -4,7 +4,7 @@
 #include <string>
 #include <utility>
 
-std::vector<Event> parse_events(int argc, char** argv)
+std::vector<Event> parse_events(int argc, const char** argv)
 {
     const std::regex reg { "(\\d+):(\\d+)\\s*(.+)\\s*" }; 
 

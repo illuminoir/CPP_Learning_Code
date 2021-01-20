@@ -4,4 +4,4 @@
 
 #include <vector>
 
-std::vector<Event> parse_events(int argc, char** argv);
+std::vector<Event> parse_events(int argc, const char** argv);
