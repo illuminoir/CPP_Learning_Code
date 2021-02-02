@@ -1,25 +1,16 @@
-#include "Clock.h"
-
-// bool isNotifyTime(Event e, int current_min, int current_sec)
-// {
-//     return e.notify_time(current_min, current_sec);
-// }
+#include "../include/Clock.h"
 
 void Clock::tick()
 {
-    /*
-    _events.erase(
-        std::remove_if(_events.begin(), _events.end(),
-                    [](Event e){ return isNotifyTime(e, )}),
-            _events.end()  
-    );
-    */
 
-    for(auto it = _events.begin() ; it != _events.end() ; it++)
+    //seg fault on "it != _events.end()"
+    //if we notify the event and then iterate (it++)
+    //we skip _events.end(), '<' necessary?
+    for(auto it = _events.begin() ; it < _events.end() ; it++)  
     {
         if(it->notify_time(_minutes.get_minutes(), _seconds.get_seconds()))
         {
-            //_events.erase(it);
+            it = _events.erase(it); 
         }
     }
 
@@ -51,14 +42,11 @@ int main(int argc, char const *argv[])
 {
     Clock c;
 
-    auto events = parse_events(argc, argv);
-    std::cout << "yes" << std::endl;
-    for(auto event : events)
+    std::vector<Event> events = parse_events(argc, argv);
+    for(Event event : events)
     {
         c.add_event(event);
     }
-
-    std::cout << "no" << std::endl;
 
     for(int i = 0 ; i < 620 ; i++)
     {

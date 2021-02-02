@@ -1,4 +1,4 @@
-#include "MinuteHand.h"
+#include "../include/MinuteHand.h"
 
 MinuteHand::MinuteHand()
     : _minutes { 0 }

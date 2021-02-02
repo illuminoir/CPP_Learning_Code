@@ -1,23 +1,20 @@
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_executable(tp2-reminders
-    Reminders.cpp
-    Event.h
-    Parsing.cpp
-    Parsing.h
-)
+# put the binary files in this directory
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
-add_executable(ex1 ex1.cpp)
-add_executable(histogram histogram.cpp histogram.h)
+add_executable(ex1 src/ex1.cpp)
+add_executable(histogram src/histogram.cpp include/histogram.h)
 add_executable(clock 
-	Clock.cpp
-	Clock.h
-	SecondHand.cpp
-	SecondHand.h
-	MinuteHand.cpp
-	MinuteHand.h	
-    Event.h
-    Event.cpp
-    Parsing.cpp
-    Parsing.h
+	src/Clock.cpp
+	include/Clock.h
+	src/SecondHand.cpp
+	include/SecondHand.h
+	src/MinuteHand.cpp
+	include/MinuteHand.h	
+    src/Event.cpp
+    include/Event.h
+    src/Parsing.cpp
+    include/Parsing.h
 )
+
+

@@ -1,6 +1,6 @@
 
 
-#include "histogram.h"
+#include "../include/histogram.h"
 #include <vector>
 #include <cctype>
 

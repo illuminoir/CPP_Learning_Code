@@ -1,4 +1,4 @@
-#include "SecondHand.h"
+#include "../include/SecondHand.h"
 
 
 SecondHand::SecondHand(MinuteHand& minutes)
