@@ -79,6 +79,7 @@ void t3_persons_are_comparable()
     Person cersei { "Cersei", "Lannister" };
     Person arya { "Arya", "Stark" };
 
+
     // Strict ordering.
     assert(!(tyrion < tyrion));
     assert(!(cersei < cersei));
@@ -118,7 +119,7 @@ void t4_phone_book_insertions_and_access()
     phone_book.insert(tyrion);
     assert(!phone_book.empty());
 
-    // PhoneBook is ordered when accessed by index. 
+    // PhoneBook is ordered when accessed by index.
     assert(phone_book[0].get_full_name() == "Cersei Lannister");
     assert(phone_book[1].get_full_name() == "Tyrion Lannister");
     assert(phone_book[2].get_full_name() == "Arya Stark");

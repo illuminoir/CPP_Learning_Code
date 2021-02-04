@@ -1,14 +1,16 @@
 #pragma once
 
+#include "PhoneBook.h"
+
 // Switch values to 1 to enable the corresponding test.
 
-#define ENABLE_T1 0
-#define ENABLE_T2 0
-#define ENABLE_T3 0
-#define ENABLE_T4 0
-#define ENABLE_T5 0
-#define ENABLE_T6 0
-#define ENABLE_T7 0
+#define ENABLE_T1 1
+#define ENABLE_T2 1
+#define ENABLE_T3 1
+#define ENABLE_T4 1
+#define ENABLE_T5 1
+#define ENABLE_T6 1
+#define ENABLE_T7 1
 #define ENABLE_T8 0
 #define ENABLE_T9 0
 
