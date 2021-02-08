@@ -1,13 +1,4 @@
-add_executable(c4-1-hierarchy
-    1-hierarchy/Hierarchy.cpp
-    1-hierarchy/Boss.cpp
-    1-hierarchy/Boss.h
-    1-hierarchy/Staff.cpp
-    1-hierarchy/Staff.h
-    1-hierarchy/Intern.cpp
-    1-hierarchy/Intern.h
-    1-hierarchy/Rank.h
-)
+
 
 add_executable(c4-2-farm
     2-farm/FarmHouse.cpp
