@@ -62,5 +62,17 @@ public:
 		return result;
 	}
 
+	std::ostream& print(std::ostream& os) const override {
+		return os << "circle";
+	}
+
+	PointContainer intersect(const Shape& other) const override {   
+		const Circle* circle = dynamic_cast<const Circle*>(&other);   
+		if(circle != nullptr){   
+			return circle->intersect(*this);    
+		} 
+	}
+
+
 	~Circle() = default;
 };

@@ -27,6 +27,11 @@ public:
 		_position = position;
 	}
 
+	const std::string& get_name() const
+	{
+		return _name;
+	}
+
 private:
 	const std::string _name;
 	int               _position = 0;
